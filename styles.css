@@ -59,6 +59,12 @@ nav ul {
     list-style-type: none;
 }
 
+@media (max-width: 480px) {
+    nav ul {
+       padding: 1rem 2rem;
+    }
+}
+
 nav ul li {
     text-decoration: none;
 }
@@ -138,18 +144,18 @@ nav ul li {
     }
 }
 
-.faqs {
+.faqs, .travel {
     margin: 50px;
     padding: 100px 50px;
     text-align: left;
 }
 
-.faqs h2 {
+.faqs h2, .travel h2 {
     font-family: Futura;
     margin: 0 0 15px 0;
 }
 
-.faqs p {
+.faqs p, .travel p:last-of-type {
     margin: 0 0 50px 0;
 }
 
