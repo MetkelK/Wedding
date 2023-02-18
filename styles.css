@@ -47,7 +47,7 @@ a:active, a:visited {
 nav {
     position: sticky;
     top: 0;
-    background: #9D8B73;
+    background: #A8877E;
 }
 
 nav ul {
@@ -69,8 +69,12 @@ nav ul li {
     text-decoration: none;
 }
 
+nav ul li a {
+    color: #E7EEF1;
+}
+
 .banner {
-    background-image: url(/assets/0942c4b5e838a12126d3c04e17c7b1bf-xxlarge.png);
+    background-image: url(/assets/SSP-LavenderMini-CK-35.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
