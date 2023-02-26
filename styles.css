@@ -131,6 +131,10 @@ nav ul li a {
     margin: 0 0 15px 0;
 }
 
+.ceremony-text a {
+    text-decoration: underline;
+}
+
 @media (max-width: 990px) {
     .ceremony {
         flex-direction: column;
@@ -154,6 +158,13 @@ nav ul li a {
     text-align: left;
 }
 
+@media (max-width: 990px) {
+    .faqs, .travel {
+        margin: 25px;
+        padding: 50px 25px;
+    }
+}
+
 .faqs h2, .travel h2 {
     font-family: Futura;
     margin: 0 0 15px 0;
@@ -166,4 +177,41 @@ nav ul li a {
 .external-link {
     color: #0D371D;
     text-decoration: underline;
+}
+
+.rsvp-form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.rsvp-form fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.rsvp-form fieldset label {
+    font-size: .825rem;
+    margin-bottom: .5rem;
+    padding-top: .2rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.rsvp-form fieldset input, .rsvp-form fieldset select {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.9);
+    padding: .75em 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.rsvp-form [type="submit"] {
+    width: auto;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;  
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.9);
+    padding: .75em 1rem;
 }
