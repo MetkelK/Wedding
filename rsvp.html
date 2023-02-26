@@ -22,7 +22,7 @@
         <p>06.23.23</p>
       </div>
     </div>
-    <section class="ceremony">
+    <section class="faqs">
       <form
         class="rsvp-form"
         id="fs-frm"
@@ -32,79 +32,108 @@
         method="post"
       >
         <fieldset id="fs-frm-inputs">
-          <label for="full-name">Full Name</label>
-          <input
-            type="text"
-            name="name"
-            id="full-name"
-            placeholder="First and Last"
-            required=""
-          />
-          <label for="email">Email</label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required=""
-          />
-          <label for="guests">Name of Guests</label>
-          <input
-            type="text"
-            name="guests"
-            id="guests"
-            placeholder="Names"
-            required=""
-          />
-          <label for="attending">Will you Attend?</label>
-          <select name="attending" id="attending" required="">
-            <option value="" selected="" disabled="">Select</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-          <label for="plus">Dinnner selection</label>
-          <select name="plus" id="plus" required="">
-            <option value="beef" selected="">Beef</option>
-            <option value="salmon">Salmon</option>
-            <option value="vegetarian">Vegetarian</option>
-          </select>
-          <label for="restrictions"
-            >Dietary restrictions we should know about?</label
-          >
-          <input
-            type="text"
-            name="restrictions"
-            id="restrictions"
-            placeholder="Dietary Restrictions"
-            required=""
-          />
-          <label for="requests"
-            >I/We promise to dance if you play (song request)</label
-          >
-          <input
-            type="text"
-            name="requests"
-            id="requests"
-            placeholder="Song Requests"
-            required=""
-          />
-          <label for="questions">Questions or Comments</label>
-          <input
-            type="text"
-            name="questions"
-            id="questions"
-            placeholder="Questions"
-            required=""
-          />
-          <input
-            type="hidden"
-            name="_subject"
-            id="email-subject"
-            value="RSVP"
-          />
+          <div>
+            <!-- NAME -->
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="full-name"
+              placeholder="First and Last"
+              required=""
+            />
+            <!-- EMAIL -->
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required=""
+            />
+            <!-- ATTENDANCE -->
+            <label for="attending">Will you Attend?</label>
+            <select name="attending" id="attending" required>
+              <option value="null" selected>Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="hidden-block">
+            <!-- GUESTS -->
+            <label for="guests">Name of Guests</label>
+            <input type="text" name="guests" id="guests" placeholder="Names" />
+            <!-- DINNER -->
+            <label for="plus">Dinner selection</label>
+            <select name="plus" id="meal" required disabled>
+              <option value="null" selected>Select a meal</option>
+              <option value="beef">Beef</option>
+              <option value="salmon">Salmon</option>
+              <option value="vegetarian">Vegetarian</option>
+            </select>
+            <!-- RESTRICTIONS -->
+            <label for="restrictions"
+              >Dietary restrictions we should know about?</label
+            >
+            <input
+              type="text"
+              name="restrictions"
+              id="restrictions"
+              placeholder="Dietary Restrictions"
+            />
+            <!-- REQUESTS -->
+            <label for="requests"
+              >I/We promise to dance if you play (song request)</label
+            >
+            <input
+              type="text"
+              name="requests"
+              id="requests"
+              placeholder="Song Requests"
+            />
+            <!-- QUESTIONS -->
+            <label for="questions">Questions or Comments</label>
+            <input
+              type="text"
+              name="questions"
+              id="questions"
+              placeholder="Questions"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              id="email-subject"
+              value="RSVP"
+            />
+          </div>
         </fieldset>
         <input type="submit" value="RSVP" />
       </form>
     </section>
   </body>
+
+  <script>
+    let attendance = document.getElementById("attending");
+    let meal = document.getElementById("meal");
+    let hidden = document.querySelector(".hidden-block");
+
+    window.addEventListener("load", () => {
+      if (attendance.value == "Yes") {
+        hidden.style.display = "block";
+        meal.removeAttribute("disabled");
+      }
+    });
+
+    attendance.addEventListener("change", (e) => {
+      console.log(meal.disabled);
+      console.log(attendance.value);
+      if (attendance.value == "Yes") {
+        hidden.style.display = "block";
+        meal.removeAttribute("disabled");
+      } else {
+        hidden.style.display = "none";
+        meal.setAttribute("disabled", "");
+      }
+    });
+  </script>
 </html>
