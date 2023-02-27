@@ -56,6 +56,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
 }
 
@@ -72,6 +73,8 @@ nav ul li {
 nav ul li a {
     color: #E7EEF1;
 }
+
+
 
 .banner {
     background-image: url(/assets/SSP-LavenderMini-CK-35.png);

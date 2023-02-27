@@ -10,6 +10,7 @@
   <body>
     <nav>
       <ul>
+        <li><a href="./index">Home</a></li>
         <li><a href="./faq">FAQ</a></li>
         <li><a href="./travel">Travel & Stay</a></li>
         <li><a href="./rsvp">RSVP</a></li>
@@ -26,8 +27,8 @@
         id="fs-frm"
         name="basic-rsvp-form"
         accept-charset="utf-8"
-        action="https://formspree.io/f/mzbqrwwz"
         method="post"
+        data-netlify="true"
       >
         <fieldset id="fs-frm-inputs">
           <div>
@@ -38,7 +39,7 @@
               name="name"
               id="full-name"
               placeholder="First and Last"
-              required=""
+              required
             />
             <!-- EMAIL -->
             <label for="email">Email</label>
@@ -47,7 +48,7 @@
               name="email"
               id="email"
               placeholder="Email"
-              required=""
+              required
             />
             <!-- ATTENDANCE -->
             <label for="attending">Will you Attend?</label>
