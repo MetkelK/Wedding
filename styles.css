@@ -117,7 +117,7 @@ nav ul li a {
 
 .ceremony img {
     width: 50%;
-    box-shadow: 0 50px 50px -50px rgb(0 0 0 / 50%);;
+    box-shadow: 0 50px 50px -50px rgb(0 0 0 / 50%);
 }
 
 .ceremony-text {
@@ -193,6 +193,10 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+    background: #E7EFF1;
+    border: none;
+    padding: 2rem;
+    box-shadow: 0 50px 50px -50px rgba(0, 0, 0, 0.5);
 }
 
 .rsvp-form fieldset label {
@@ -203,7 +207,7 @@ nav ul li a {
     align-items: baseline;
 }
 
-.rsvp-form fieldset input, .rsvp-form fieldset select {
+.rsvp-form fieldset input, .rsvp-form fieldset select, .rsvp-form fieldset textarea {
     border: 1px solid rgba(0,0,0,0.2);
     background-color: rgba(255,255,255,0.9);
     padding: .75em 1rem;
@@ -226,6 +230,13 @@ nav ul li a {
     color: black;
     background-color: rgba(255,255,255,0.9);
     padding: .75em 1rem;
+    transition: all 0.2s ease-out;
+}
+
+.rsvp-form [type="submit"]:hover {
+    background-color: #E7EFF1;
+    transform: translateY(-5px);
+    box-shadow: 0 50px 50px -50px rgba(0, 0, 0, 0.5);
 }
 
 .rsvp-form textarea {
