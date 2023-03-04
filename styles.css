@@ -184,7 +184,8 @@ nav ul li a {
 
 .rsvp-form {
     width: 100%;
-    min-width: 250px;
+    /* min-width: 250px; */
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -211,6 +212,10 @@ nav ul li a {
     border-radius: 5px;
 }
 
+.rsvp-form fieldset input[type="radio"] {
+    width: 1rem;
+}
+
 .rsvp-form [type="submit"] {
     width: auto;
     cursor: pointer;
@@ -223,6 +228,14 @@ nav ul li a {
     padding: .75em 1rem;
 }
 
+.rsvp-form textarea {
+    width: 100%;
+}
+
 .hidden-block {
     display: none;
+}
+
+.hidden {
+  display: none;
 }
