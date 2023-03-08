@@ -208,6 +208,9 @@ nav ul li a {
     /* min-width: 250px; */
     max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .rsvp-form fieldset {
