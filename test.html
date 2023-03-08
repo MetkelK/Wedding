@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="attend">Will you attend?</label>
+        <select id="attend" name="attend" required>
+          <option value="" disabled selected>Please select</option>
+          <option value="yes">Yes, I'll be there!</option>
+          <option value="no">Sorry, can't make it.</option>
+        </select>
+      </div>
+      <div id="dinner-section" class="hidden">
+        <div>
+          <label for="dinner-selection">Dinner Selection:</label>
+          <select id="dinner-selection" name="dinner-selection" required>
+            <option value="" disabled selected>Please select</option>
+            <option value="beef">Beef</option>
+            <option value="salmon">Salmon</option>
+            <option value="vegetarian">Vegetarian</option>
+          </select>
+        </div>
+        <div>
+          <label for="dietary-restrictions"
+            >Do you have any dietary restrictions?</label
+          >
+          <input
+            type="text"
+            id="dietary-restrictions"
+            name="dietary-restrictions"
+          />
+        </div>
+        <div>
+          <label for="bring-guests">Will you bring guests?</label>
+          <select id="bring-guests" name="bring-guests" required>
+            <option value="" disabled selected>Please select</option>
+            <option value="yes">Yes, I'll bring guests.</option>
+            <option value="no">No, it'll just be me.</option>
+          </select>
+        </div>
+        <div id="guest-section" class="hidden">
+          <div>
+            <label for="num-guests">How many guests will you bring?</label>
+            <select id="num-guests" name="num-guests" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div id="guest-names-section" style="display: none">
+            <div id="guest-names"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="song-requests">Song Requests:</label>
+        <textarea id="song-requests" name="song-requests"></textarea>
+      </div>
+      <div>
+        <label for="transportation">Do you require transportation?</label>
+        <select id="transportation" name="transportation" required>
+          <option value="" disabled selected>Please select</option>
+          <option value="yes">Yes, I need transportation.</option>
+          <option value="no">No, I'll provide my own transportation.</option>
+        </select>
+      </div>
+      <div>
+        <label for="questions-comments">Questions or Comments:</label>
+        <textarea id="questions-comments" name="questions-comments"></textarea>
+      </div>
+      <button type="submit">Submit RSVP</button>
+    </form>
+  </body>
+
+  <script>
+    // Get DOM elements
+    const attendSelect = document.getElementById("attend");
+    const dinnerSection = document.getElementById("dinner-section");
+    const bringGuestsSelect = document.getElementById("bring-guests");
+    const guestSection = document.getElementById("guest-section");
+    const numGuestsSelect = document.getElementById("num-guests");
+    const guestNamesDiv = document.getElementById("guest-names");
+    const guestNamesSection = document.getElementById("guest-names-section");
+
+    // Show/hide sections based on user input
+    attendSelect.addEventListener("change", function () {
+      if (this.value === "yes") {
+        dinnerSection.classList.remove("hidden");
+      } else {
+        dinnerSection.classList.add("hidden");
+        bringGuestsSelect.value = "";
+        guestSection.classList.add("hidden");
+        guestNamesDiv.innerHTML = "";
+      }
+    });
+
+    bringGuestsSelect.addEventListener("change", function () {
+      if (this.value === "yes") {
+        guestSection.classList.remove("hidden");
+      } else {
+        guestSection.classList.add("hidden");
+        numGuestsSelect.value = "";
+        guestNamesDiv.innerHTML = "";
+      }
+    });
+
+    numGuestsSelect.addEventListener("change", function () {
+      const numGuests = parseInt(this.value);
+
+      // Show guest names section
+      guestNamesSection.style.display = "block";
+
+      // Create input fields for guest names, dinner selections, and dietary restrictions
+      let guestInputs = "";
+      for (let i = 1; i <= numGuests; i++) {
+        guestInputs += `
+      <div>
+        <label for="guest${i}-name">Name of Guest ${i}:</label>
+        <input type="text" id="guest${i}-name" name="guest${i}-name" required>
+      </div>
+      <div>
+        <label for="guest${i}-dinner-selection">Guest ${i} Dinner Selection:</label>
+        <select id="guest${i}-dinner-selection" name="guest${i}-dinner-selection" required>
+          <option value="" disabled selected>Please select</option>
+          <option value="beef">Beef</option>
+          <option value="salmon">Salmon</option>
+          <option value="vegetarian">Vegetarian</option>
+        </select>
+      </div>
+      <div>
+        <label for="guest${i}-dietary-restrictions">Guest ${i} Dietary Restrictions:</label>
+        <input type="text" id="guest${i}-dietary-restrictions" name="guest${i}-dietary-restrictions">
+      </div>
+    `;
+      }
+      guestNamesDiv.innerHTML = guestInputs;
+    });
+  </script>
+</html>
+
+<form
+  class="rsvp-form"
+  id="fs-frm"
+  name="basic-rsvp-form"
+  accept-charset="utf-8"
+  method="post"
+  data-netlify="true"
+>
+  <fieldset id="fs-frm-inputs">
+    <div>
+      <!-- NAME -->
+      <label for="full-name">Full Name</label>
+      <input
+        type="text"
+        name="name"
+        id="full-name"
+        placeholder="First and Last"
+        required
+      />
+      <!-- EMAIL -->
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+      />
+      <!-- ATTENDANCE -->
+      <p>Will you attend?</p>
+      <label for="attending-yes">Yes</label>
+      <input
+        type="radio"
+        id="attending-yes"
+        name="attending"
+        value="yes"
+        required
+      />
+      <label for="attending-no">No</label>
+      <input
+        type="radio"
+        id="attending-no"
+        name="attending"
+        value="no"
+        required
+      />
+    </div>
+
+    <!-- GUESTS -->
+    <label for="guests">Name of Guests</label>
+    <input type="text" name="guests" id="guests" placeholder="Names" />
+    <!-- DINNER -->
+    <label for="plus">Dinner selection</label>
+    <select name="plus" id="meal" required disabled>
+      <option value="null" selected>Select a meal</option>
+      <option value="beef">Beef</option>
+      <option value="salmon">Salmon</option>
+      <option value="vegetarian">Vegetarian</option>
+    </select>
+    <!-- RESTRICTIONS -->
+    <label for="restrictions">Dietary restrictions we should know about?</label>
+    <input
+      type="text"
+      name="restrictions"
+      id="restrictions"
+      placeholder="Dietary Restrictions"
+    />
+    <!-- REQUESTS -->
+    <label for="requests"
+      >I/We promise to dance if you play (song request)</label
+    >
+    <input
+      type="text"
+      name="requests"
+      id="requests"
+      placeholder="Song Requests"
+    />
+    <!-- QUESTIONS -->
+    <label for="questions">Questions or Comments</label>
+    <input
+      type="text"
+      name="questions"
+      id="questions"
+      placeholder="Questions"
+    />
+    <input type="hidden" name="_subject" id="email-subject" value="RSVP" />
+
+    <div id="guest-question">
+      <p>Will you bring guests?</p>
+      <label for="guests-yes">Yes</label>
+      <input type="radio" id="guests-yes" name="guests" value="yes" />
+      <label for="guests-no">No</label>
+      <input type="radio" id="guests-no" name="guests" value="no" />
+    </div>
+
+    <div id="guest-info" style="display: none">
+      <label for="num-guests">Number of guests:</label>
+      <input type="number" id="num-guests" name="num-guests" min="1" max="10" />
+
+      <div id="guest-names">
+        <label for="guest-name-1">Guest 1:</label>
+        <input type="text" id="guest-name-1" name="guest-name-1" />
+      </div>
+
+      <p>Guests' Dinner Selection:</p>
+      <div id="guest-dinner">
+        <label for="guest-dinner-1">Guest 1:</label>
+        <select id="guest-dinner-1" name="guest-dinner-1">
+          <option value="beef">Beef</option>
+          <option value="fish">Fish</option>
+          <option value="vegetarian">Vegetarian</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="dietary-restrictions">Dietary Restrictions:</label>
+    <textarea id="dietary-restrictions" name="dietary-restrictions"></textarea>
+
+    <label for="song-requests">Song Requests:</label>
+    <textarea id="song-requests" name="song-requests"></textarea>
+
+    <p>Transportation Requirements:</p>
+    <label for="transportation-yes">Yes</label>
+    <input
+      type="radio"
+      id="transportation-yes"
+      name="transportation"
+      value="yes"
+    />
+    <label for="transportation-no">No</label>
+    <input
+      type="radio"
+      id="transportation-no"
+      name="transportation"
+      value="no"
+    />
+
+    <label for="questions-comments">Questions or Comments:</label>
+    <textarea id="questions-comments" name="questions-comments"></textarea>
+  </fieldset>
+  <input type="submit" value="RSVP" />
+</form>
