@@ -223,26 +223,40 @@
             </div>
             <div>
               <label for="bring-guests">Will you bring guests?</label>
-              <select id="bring-guests" name="bring-guests" required>
-                <option value="" disabled selected>Please select</option>
-                <option value="yes">Yes, I'll bring guests.</option>
-                <option value="no">No, it'll just be me.</option>
-              </select>
+              <input type="radio" id="guest-yes" name="guest" value="yes" />
+              <label for="guest-no">No</label>
+              <input
+                type="radio"
+                id="guest-no"
+                name="guest"
+                value="no"
+                checked
+              />
             </div>
-            <div id="guest-section" class="hidden">
-              <div>
-                <label for="num-guests">How many guests will you bring?</label>
-                <select id="num-guests" name="num-guests" required>
-                  <option value="" disabled selected>Please select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+            <div id="guest-details" class="hidden">
+              <div class="form-group">
+                <label for="guest-name">Guest Name:</label>
+                <input type="text" id="guest-name" name="guestName" />
+              </div>
+
+              <div class="form-group">
+                <label for="guest-dinner-selection">Dinner Selection:</label>
+                <select id="guest-dinner-selection" name="guestDinnerSelection">
+                  <option value="beef">Beef</option>
+                  <option value="salmon">Salmon</option>
+                  <option value="vegetarian">Vegetarian</option>
                 </select>
               </div>
-              <div id="guest-names-section" style="display: none">
-                <div id="guest-names"></div>
+
+              <div class="form-group">
+                <label for="guest-dietary-restrictions"
+                  >Dietary Restrictions:</label
+                >
+                <input
+                  type="text"
+                  id="guest-dietary-restrictions"
+                  name="guestDietaryRestrictions"
+                />
               </div>
             </div>
           </div>
