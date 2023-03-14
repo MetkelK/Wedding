@@ -221,17 +221,22 @@
                 name="dietary-restrictions"
               />
             </div>
-            <div>
+            <div id="bring-guests" class="guest-question">
               <label for="bring-guests">Will you bring guests?</label>
-              <input type="radio" id="guest-yes" name="guest" value="yes" />
-              <label for="guest-no">No</label>
-              <input
-                type="radio"
-                id="guest-no"
-                name="guest"
-                value="no"
-                checked
-              />
+              <div class="guest-yes">
+                <label for="guest-yes">Yes</label>
+                <input type="radio" id="guest-yes" name="guest" value="yes" />
+              </div>
+              <div class="guest-no">
+                <label for="guest-no">No</label>
+                <input
+                  type="radio"
+                  id="guest-no"
+                  name="guest"
+                  value="no"
+                  checked
+                />
+              </div>
             </div>
             <div id="guest-details" class="hidden">
               <div class="form-group">

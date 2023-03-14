@@ -246,6 +246,9 @@ nav ul li a {
 
 .rsvp-form fieldset input[type="radio"] {
     width: 1rem;
+    margin-bottom: .5rem;
+    padding-top: .2rem;
+    margin-left: 0.5rem;
 }
 
 .rsvp-form [type="submit"] {
@@ -270,6 +273,23 @@ nav ul li a {
 
 .rsvp-form textarea {
     width: 100%;
+}
+
+.rsvp-form .guest-question {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.rsvp-form .guest-question label {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+.rsvp-form .guest-question .guest-yes,.rsvp-form .guest-question .guest-no {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .hidden {
