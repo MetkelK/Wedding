@@ -160,11 +160,11 @@
         </ul>
       </div>
     </nav>
-    <div class="banner">
+    <!-- <div class="banner">
       <div class="text">
         <h1>RSVP</h1>
       </div>
-    </div>
+    </div> -->
     <section class="faqs">
       <p style="text-align: center">
         <b
@@ -184,113 +184,127 @@
         method="post"
         data-netlify="true"
       >
-        <fieldset id="fs-frm-inputs">
-          <div>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div>
-            <label for="attend">Will you attend?</label>
-            <select id="attend" name="attend" required>
-              <option value="" disabled selected>Please select</option>
-              <option value="yes">Yes, I'll be there!</option>
-              <option value="no">Sorry, can't make it.</option>
-            </select>
-          </div>
-          <div id="dinner-section" class="hidden">
-            <div>
-              <label for="dinner-selection">Dinner Selection:</label>
-              <select id="dinner-selection" name="dinner-selection" required>
-                <option value="" disabled selected>Please select</option>
-                <option value="beef">Beef</option>
-                <option value="salmon">Salmon</option>
-                <option value="vegetarian">Vegetarian</option>
-              </select>
-            </div>
-            <div>
-              <label for="dietary-restrictions"
-                >Do you have any dietary restrictions?</label
+        <fieldset>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </fieldset>
+        <fieldset>
+          <legend>Will you attend?</legend>
+          <label>
+            <input type="radio" name="attendance" value="yes" />
+            Yes, I'll be there!
+          </label>
+          <label>
+            <input type="radio" name="attendance" value="no" />
+            Sorry, I can't make it.
+          </label>
+        </fieldset>
+
+        <div id="dinner-options" class="hidden">
+          <fieldset>
+            <legend>Dinner Selection:</legend>
+            <label>
+              <input type="radio" name="dinner" value="beef" />
+              Beef
+            </label>
+            <label>
+              <input type="radio" name="dinner" value="salmon" />
+              Salmon
+            </label>
+            <label>
+              <input type="radio" name="dinner" value="vegetarian" />
+              Vegetarian
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label for="dietary-restrictions">Dietary Restrictions:</label>
+            <input
+              type="text"
+              id="dietary-restrictions"
+              name="dietary-restrictions"
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Are you bringing a guest?</legend>
+            <label>
+              <input type="radio" name="guest" value="yes" />
+              Yes
+            </label>
+            <label>
+              <input type="radio" name="guest" value="no" />
+              No
+            </label>
+          </fieldset>
+
+          <div id="guest-info" class="hidden">
+            <fieldset>
+              <label for="guest-name">Guest Name:</label>
+              <input type="text" id="guest-name" name="guest-name" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Guest Dinner Selection:</legend>
+              <label>
+                <input type="radio" name="guest-dinner" value="beef" />
+                Beef
+              </label>
+              <label>
+                <input type="radio" name="guest-dinner" value="salmon" />
+                Salmon
+              </label>
+              <label>
+                <input type="radio" name="guest-dinner" value="vegetarian" />
+                Vegetarian
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <label for="guest-dietary-restrictions"
+                >Guest Dietary Restrictions:</label
               >
               <input
                 type="text"
-                id="dietary-restrictions"
-                name="dietary-restrictions"
+                id="guest-dietary-restrictions"
+                name="guest-dietary-restrictions"
               />
-            </div>
-            <div id="bring-guests" class="guest-question">
-              <label for="bring-guests">Will you bring guests?</label>
-              <div class="guest-yes">
-                <label for="guest-yes">Yes</label>
-                <input type="radio" id="guest-yes" name="guest" value="yes" />
-              </div>
-              <div class="guest-no">
-                <label for="guest-no">No</label>
-                <input
-                  type="radio"
-                  id="guest-no"
-                  name="guest"
-                  value="no"
-                  checked
-                />
-              </div>
-            </div>
-            <div id="guest-details" class="hidden">
-              <div class="form-group">
-                <label for="guest-name">Guest Name:</label>
-                <input type="text" id="guest-name" name="guestName" />
-              </div>
+            </fieldset>
+          </div>
+        </div>
 
-              <div class="form-group">
-                <label for="guest-dinner-selection">Dinner Selection:</label>
-                <select id="guest-dinner-selection" name="guestDinnerSelection">
-                  <option value="beef">Beef</option>
-                  <option value="salmon">Salmon</option>
-                  <option value="vegetarian">Vegetarian</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="guest-dietary-restrictions"
-                  >Dietary Restrictions:</label
-                >
-                <input
-                  type="text"
-                  id="guest-dietary-restrictions"
-                  name="guestDietaryRestrictions"
-                />
-              </div>
-            </div>
-          </div>
-          <div id="song-requests-section" class="hidden">
-            <label for="song-requests">Song Requests:</label>
-            <textarea id="song-requests" name="song-requests"></textarea>
-          </div>
-          <div id="transportation-section" class="hidden">
-            <label for="transportation"
-              >Do you need transportation between the hotel of choice and
-              Holland Marsh Winery?</label
-            >
-            <select id="transportation" name="transportation" required>
-              <option value="" disabled selected>Please select</option>
-              <option value="yes">Yes, I need transportation.</option>
-              <option value="no">
-                No, I'll provide my own transportation.
-              </option>
-            </select>
-          </div>
-          <div id="questions-section" class="hidden">
-            <label for="questions-comments">Questions or Comments:</label>
-            <textarea
-              id="questions-comments"
-              name="questions-comments"
-            ></textarea>
-          </div>
+        <fieldset>
+          <label for="song-requests">Song Requests:</label>
+          <textarea id="song-requests" name="song-requests"></textarea>
         </fieldset>
-        <button type="submit" value="RSVP">RSVP</button>
+
+        <fieldset>
+          <legend>
+            Do you need transportation between the hotel and the winery?
+          </legend>
+          <label>
+            <input type="radio" name="transportation" value="yes" />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="transportation" value="no" />
+            No
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="questions-comments">Questions or Comments:</label>
+          <textarea
+            id="questions-comments"
+            name="questions-comments"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <button type="submit" value="RSVP">RSVP</button>
+        </fieldset>
       </form>
     </section>
   </body>
