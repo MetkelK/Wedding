@@ -176,7 +176,7 @@
       <p style="text-align: center">
         We look forward to you joining us! Fill our the form below
       </p>
-      <form
+      <!-- <form
         class="rsvp-form"
         id="fs-frm"
         name="test-form"
@@ -305,6 +305,300 @@
         <fieldset>
           <button type="submit" value="RSVP">RSVP</button>
         </fieldset>
+      </form> -->
+      <form
+        class="rsvp-form"
+        id="new-form"
+        name="new-form"
+        accept-charset="utf-8"
+        method="POST"
+        data-netlify="true"
+      >
+        <div class="">
+          <!-- NAME -->
+          <div class="">
+            <label for="name" class="">Full Name</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Your name"
+              name="name"
+              access="false"
+              value="name"
+              id="name"
+              required="required"
+              aria-required="true"
+            />
+          </div>
+
+          <!-- EMAIL -->
+          <div class="">
+            <label for="email" class="">Email</label>
+            <br />
+            <input
+              type="email"
+              placeholder="Your email"
+              name="email"
+              access="false"
+              value="email"
+              id="email"
+              required="required"
+              aria-required="true"
+            />
+          </div>
+
+          <!-- ATTENDANCE -->
+          <div class="">
+            <label for="attendance" class="">Will you attend? </label>
+            <br />
+            <div class="radio-group">
+              <div class="">
+                <input
+                  name="attendance"
+                  access="false"
+                  id="attendance-0"
+                  required="required"
+                  aria-required="true"
+                  value="Yes, I'll be there!"
+                  type="radio"
+                />
+                <label for="attendance-0">Yes, I'll be there!</label>
+              </div>
+              <div class="">
+                <input
+                  name="attendance"
+                  access="false"
+                  id="attendance-1"
+                  required="required"
+                  aria-required="true"
+                  value="Sorry, I can't make it."
+                  type="radio"
+                />
+                <label for="attendance-1">Sorry, I can't make it.</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- DINNER SELECTION -->
+          <div class="">
+            <label for="dinner-selection" class="">Dinner Selection </label>
+            <br />
+            <div class="radio-group">
+              <div class="">
+                <input
+                  name="dinner-selection"
+                  access="false"
+                  id="dinner-selection-0"
+                  value="beef"
+                  type="radio"
+                />
+                <label for="dinner-selection-0">Beef</label>
+              </div>
+              <div class="">
+                <input
+                  name="dinner-selection"
+                  access="false"
+                  id="dinner-selection-1"
+                  value="salmon"
+                  type="radio"
+                />
+                <label for="dinner-selection-1">Salmon</label>
+              </div>
+              <div class="">
+                <input
+                  name="dinner-selection"
+                  access="false"
+                  id="dinner-selection-2"
+                  value="vegetarian"
+                  type="radio"
+                />
+                <label for="dinner-selection-2">Vegetarian</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- DIETARY RESTRICTIONS -->
+          <div class="">
+            <label for="dietary-restrictions" class=""
+              >Do you have any dietary restrictions?
+              <br />
+            </label>
+            <input
+              type="text"
+              class=""
+              name="dietary-restrictions"
+              access="false"
+              value=""
+              id="dietary-restrictions"
+            />
+          </div>
+
+          <!-- GUEST ATTENDANCE -->
+          <div class="">
+            <label for="guest-attendance" class=""
+              >Will you bring a guest?
+              <br />
+            </label>
+            <div class="radio-group">
+              <div class="">
+                <input
+                  name="guest-attendance-yes"
+                  access="false"
+                  id="guest-yes"
+                  value="guest-yes"
+                  type="radio"
+                />
+                <label for="guest-attendance-yes">Yes</label>
+              </div>
+              <div class="formbuilder-radio-inline">
+                <input
+                  name="guest-attendance-no"
+                  access="false"
+                  id="guest-no"
+                  value="guest-no"
+                  type="radio"
+                />
+                <label for="guest-attendance-no">No</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- GUEST NAME -->
+          <div class="">
+            <label for="guest-name" class=""
+              >What is your guest's name?
+              <br />
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              name="guest-name"
+              access="false"
+              value=""
+              id="guest-name"
+            />
+          </div>
+
+          <!-- GUEST DIETARY RESTRICTIONS -->
+          <div class="">
+            <label for="guest-dietary-restrictions" class=""
+              >What is your guests dinner selection?
+            </label>
+            <br />
+            <div class="">
+              <div class="">
+                <input
+                  name="guest-dietary-restrictions"
+                  access="false"
+                  id="guest-dietary-restrictions-0"
+                  required="required"
+                  aria-required="true"
+                  value="beef"
+                  type="radio"
+                />
+                <label for="guest-dietary-restrictions-0">Beef</label>
+              </div>
+              <div class="">
+                <input
+                  name="guest-dietary-restrictions"
+                  access="false"
+                  id="guest-dietary-restrictions-1"
+                  required="required"
+                  aria-required="true"
+                  value="salmon"
+                  type="radio"
+                />
+                <label for="guest-dietary-restrictions-1">Salmon</label>
+              </div>
+              <div class="">
+                <input
+                  name="guest-dietary-restrictions"
+                  access="false"
+                  id="guest-dietary-restrictions-2"
+                  required="required"
+                  aria-required="true"
+                  value="vegetarian"
+                  type="radio"
+                />
+                <label for="guest-dietary-restrictions-2">Vegetarian</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- GUEST DIETARY RESTRICTIONS -->
+          <div class="">
+            <label
+              for="guest-dietary-restrictions"
+              class="formbuilder-text-label"
+              >Does your guest have any dietary restrictions?
+            </label>
+            <br />
+            <input
+              type="text"
+              class=""
+              name="guest-dietary-restrictions"
+              access="false"
+              value=""
+              id="guest-dietary-restrictions"
+            />
+          </div>
+
+          <!-- SONG REQUESTS -->
+          <div class="">
+            <label for="song-requests" class="">Song requests </label>
+            <br />
+            <input
+              type="text"
+              name="song-requests"
+              access="false"
+              value=""
+              id="song-requests"
+            />
+          </div>
+
+          <!-- TRANSPORTATION -->
+          <div class="">
+            <label for="transportation" class=""
+              >Do you need transportation between the hotel and the winery?
+            </label>
+            <input type="radio" name="transportation" value="yes" />
+            <div class="">
+              <div class="formbuilder-radio">
+                <input
+                  name="transportation"
+                  access="false"
+                  id="transportation-0"
+                  value="yes"
+                  type="radio"
+                />
+                <label for="transportation-0">Yes</label>
+              </div>
+              <div class="">
+                <input
+                  name="transportation"
+                  access="false"
+                  id="transportation-1"
+                  value="no"
+                  type="radio"
+                />
+                <label for="transportation-1">No</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTIONS -->
+          <div class="">
+            <label for="questions" class="">Questions or comments </label>
+            <br />
+            <textarea
+              type="textarea"
+              name="questions"
+              access="false"
+              id="questions"
+              value=""
+            ></textarea>
+          </div>
+        </div>
       </form>
     </section>
     <script src="/main.js"></script>
