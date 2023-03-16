@@ -349,7 +349,7 @@
 
           <!-- ATTENDANCE -->
           <fieldset class="">
-            <legend for="attendance" class="">Will you attend?</legend>
+            <legend class="">Will you attend?</legend>
             <div class="">
               <div class="">
                 <input
@@ -434,34 +434,38 @@
           </div>
 
           <!-- GUEST ATTENDANCE -->
-          <div class="">
-            <label for="guest-attendance" class=""
-              >Will you bring a guest?
-            </label>
-            <br />
+          <fieldset class="">
+            <legend for="guest-attendance" class=""></legend>
+              Will you bring a guest?
+            </legend>
+            
             <div class="">
               <div class="">
-                <input
-                  name="guest-attendance-yes"
-                  access="false"
-                  id="guest-yes"
-                  value="guest-yes"
-                  type="radio"
-                />
-                <label for="guest-attendance-yes">Yes</label>
+                <label for="guest-attendance-yes">
+                  <input
+                    name="guest-attendance"
+                    access="false"
+                    id="guest-attendance-yes"
+                    value="yes"
+                    type="radio"
+                  />
+                  Yes</label
+                >
               </div>
               <div class="">
+                <label for="guest-attendance-no">
                 <input
-                  name="guest-attendance-no"
+                  name="guest-attendance"
                   access="false"
-                  id="guest-no"
-                  value="guest-no"
+                  id="guest-attendance-no"
+                  value="no"
                   type="radio"
+                  checked
                 />
-                <label for="guest-attendance-no">No</label>
+                  No</label>
               </div>
             </div>
-          </div>
+          </fieldset>
 
           <!-- GUEST NAME -->
           <div class="">
