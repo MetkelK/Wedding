@@ -308,8 +308,8 @@
       </form> -->
       <form
         class="rsvp-form"
-        id="new-form"
-        name="new-form"
+        id="test-form"
+        name="test-form"
         accept-charset="utf-8"
         method="POST"
         data-netlify="true"
@@ -324,7 +324,7 @@
               placeholder="Your name"
               name="name"
               access="false"
-              value="name"
+              value=""
               id="name"
               required="required"
               aria-required="true"
@@ -340,7 +340,7 @@
               placeholder="Your email"
               name="email"
               access="false"
-              value="email"
+              value=""
               id="email"
               required="required"
               aria-required="true"
@@ -348,39 +348,36 @@
           </div>
 
           <!-- ATTENDANCE -->
-          <div class="">
-            <label for="attendance" class=""
-              >Will you attend?
-
-              <br />
+          <fieldset class="">
+            <legend for="attendance" class="">Will you attend?</legend>
+            <div class="">
               <div class="">
-                <div class="">
-                  <input
-                    name="attendance"
-                    access="false"
-                    id="attendance-0"
-                    required="required"
-                    aria-required="true"
-                    value="Yes, I'll be there!"
-                    type="radio"
-                  />
-                  <label for="attendance-0">Yes, I'll be there!</label>
-                </div>
-                <div class="">
-                  <input
-                    name="attendance"
-                    access="false"
-                    id="attendance-1"
-                    required="required"
-                    aria-required="true"
-                    value="Sorry, I can't make it."
-                    type="radio"
-                  />
-                  <label for="attendance-1">Sorry, I can't make it.</label>
-                </div>
+                <input
+                  name="attendance"
+                  access="false"
+                  id="attendance-0"
+                  required="required"
+                  aria-required="true"
+                  value="Yes, I'll be there!"
+                  type="radio"
+                />
+                <label for="attendance-0">Yes, I'll be there!</label>
               </div>
-            </label>
-          </div>
+              <div class="">
+                <input
+                  name="attendance"
+                  access="false"
+                  id="attendance-1"
+                  required="required"
+                  aria-required="true"
+                  value="Sorry, I can't make it."
+                  type="radio"
+                  checked
+                />
+                <label for="attendance-1">Sorry, I can't make it.</label>
+              </div>
+            </div>
+          </fieldset>
 
           <!-- DINNER SELECTION -->
           <div class="">
