@@ -349,34 +349,37 @@
 
           <!-- ATTENDANCE -->
           <div class="">
-            <label for="attendance" class="">Will you attend? </label>
-            <br />
-            <div class="radio-group">
+            <label for="attendance" class=""
+              >Will you attend?
+
+              <br />
               <div class="">
-                <input
-                  name="attendance"
-                  access="false"
-                  id="attendance-0"
-                  required="required"
-                  aria-required="true"
-                  value="Yes, I'll be there!"
-                  type="radio"
-                />
-                <label for="attendance-0">Yes, I'll be there!</label>
+                <div class="">
+                  <input
+                    name="attendance"
+                    access="false"
+                    id="attendance-0"
+                    required="required"
+                    aria-required="true"
+                    value="Yes, I'll be there!"
+                    type="radio"
+                  />
+                  <label for="attendance-0">Yes, I'll be there!</label>
+                </div>
+                <div class="">
+                  <input
+                    name="attendance"
+                    access="false"
+                    id="attendance-1"
+                    required="required"
+                    aria-required="true"
+                    value="Sorry, I can't make it."
+                    type="radio"
+                  />
+                  <label for="attendance-1">Sorry, I can't make it.</label>
+                </div>
               </div>
-              <div class="">
-                <input
-                  name="attendance"
-                  access="false"
-                  id="attendance-1"
-                  required="required"
-                  aria-required="true"
-                  value="Sorry, I can't make it."
-                  type="radio"
-                />
-                <label for="attendance-1">Sorry, I can't make it.</label>
-              </div>
-            </div>
+            </label>
           </div>
 
           <!-- DINNER SELECTION -->
@@ -437,9 +440,9 @@
           <div class="">
             <label for="guest-attendance" class=""
               >Will you bring a guest?
-              <br />
             </label>
-            <div class="radio-group">
+            <br />
+            <div class="">
               <div class="">
                 <input
                   name="guest-attendance-yes"
@@ -450,7 +453,7 @@
                 />
                 <label for="guest-attendance-yes">Yes</label>
               </div>
-              <div class="formbuilder-radio-inline">
+              <div class="">
                 <input
                   name="guest-attendance-no"
                   access="false"
@@ -567,7 +570,7 @@
                   name="transportation"
                   access="false"
                   id="transportation-0"
-                  value="yes"
+                  value="transportation-yes"
                   type="radio"
                 />
                 <label for="transportation-0">Yes</label>
@@ -577,7 +580,7 @@
                   name="transportation"
                   access="false"
                   id="transportation-1"
-                  value="no"
+                  value="transportation-no"
                   type="radio"
                 />
                 <label for="transportation-1">No</label>
