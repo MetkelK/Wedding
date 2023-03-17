@@ -323,7 +323,6 @@
               type="text"
               placeholder="Your name"
               name="name"
-              access="false"
               value=""
               id="name"
               required="required"
@@ -339,7 +338,6 @@
               type="email"
               placeholder="Your email"
               name="email"
-              access="false"
               value=""
               id="email"
               required="required"
@@ -350,35 +348,33 @@
           <!-- ATTENDANCE -->
           <fieldset class="">
             <legend class="">Will you attend?</legend>
-            <div class="">
-              <div class="">
-                <label>
-                  <input
-                    name="attendance"
-                    access="false"
-                    id="attendance-0"
-                    required="required"
-                    aria-required="true"
-                    value=""
-                    type="radio"
-                  />
-                  Yes, I'll be there!</label>
-              </div>
-              <div class="">
-                <label>
-                  <input
-                    name="attendance"
-                    access="false"
-                    id="attendance-1"
-                    required="required"
-                    aria-required="true"
-                    value=""
-                    type="radio"
-                    checked
-                  />
-                  Sorry, I can't make it.</label>
-              </div>
-            </div>
+            <p>
+              <label>
+                <input
+                  name="attendance"
+                  id="attendance-0"
+                  required="required"
+                  aria-required="true"
+                  value="Yes"
+                  type="radio"
+                />
+                Yes, I'll be there!</label
+              >
+            </p>
+            <p>
+              <label>
+                <input
+                  name="attendance"
+                  id="attendance-1"
+                  required="required"
+                  aria-required="true"
+                  value="No"
+                  type="radio"
+                  checked
+                />
+                Sorry, I can't make it.</label
+              >
+            </p>
           </fieldset>
 
           <!-- DINNER SELECTION -->
@@ -390,34 +386,34 @@
                 <label>
                   <input
                     name="dinner-selection"
-                    access="false"
                     id="dinner-selection-0"
                     value="beef"
                     type="radio"
                   />
-                  Beef</label>
+                  Beef</label
+                >
               </div>
               <div class="">
                 <label>
                   <input
                     name="dinner-selection"
-                    access="false"
                     id="dinner-selection-1"
                     value="salmon"
                     type="radio"
                   />
-                  Salmon</label>
+                  Salmon</label
+                >
               </div>
               <div class="">
                 <label>
                   <input
                     name="dinner-selection"
-                    access="false"
                     id="dinner-selection-2"
                     value="vegetarian"
                     type="radio"
                   />
-                  Vegetarian</label>
+                  Vegetarian</label
+                >
               </div>
             </div>
           </div>
@@ -432,7 +428,6 @@
               type="text"
               class=""
               name="dietary-restrictions"
-              access="false"
               value=""
               id="dietary-restrictions"
             />
@@ -440,16 +435,13 @@
 
           <!-- GUEST ATTENDANCE -->
           <fieldset class="">
-            <legend class=""></legend>
-              Will you bring a guest?
-            </legend>
-            
+            <legend class="">Will you bring a guest?</legend>
+
             <div class="">
               <div class="">
                 <label>
                   <input
                     name="guest-attendance"
-                    access="false"
                     id="guest-attendance-yes"
                     value="yes"
                     type="radio"
@@ -458,16 +450,16 @@
                 >
               </div>
               <div class="">
-                <label >
+                <label>
                   <input
-                  name="guest-attendance"
-                  access="false"
-                  id="guest-attendance-no"
-                  value="no"
-                  type="radio"
-                  checked
+                    name="guest-attendance"
+                    id="guest-attendance-no"
+                    value="no"
+                    type="radio"
+                    checked
                   />
-                  No</label>
+                  No</label
+                >
               </div>
             </div>
           </fieldset>
@@ -482,13 +474,12 @@
               type="text"
               class="form-control"
               name="guest-name"
-              access="false"
               value=""
               id="guest-name"
             />
           </div>
 
-          <!-- GUEST DIETARY RESTRICTIONS -->
+          <!-- GUEST DINNER SELECTION -->
           <div class="">
             <label for="guest-dietary-restrictions" class=""
               >What is your guests dinner selection?
@@ -498,7 +489,6 @@
               <div class="">
                 <input
                   name="guest-dietary-restrictions"
-                  access="false"
                   id="guest-dietary-restrictions-0"
                   required="required"
                   aria-required="true"
@@ -510,7 +500,6 @@
               <div class="">
                 <input
                   name="guest-dietary-restrictions"
-                  access="false"
                   id="guest-dietary-restrictions-1"
                   required="required"
                   aria-required="true"
@@ -522,7 +511,6 @@
               <div class="">
                 <input
                   name="guest-dietary-restrictions"
-                  access="false"
                   id="guest-dietary-restrictions-2"
                   required="required"
                   aria-required="true"
@@ -546,7 +534,6 @@
               type="text"
               class=""
               name="guest-dietary-restrictions"
-              access="false"
               value=""
               id="guest-dietary-restrictions"
             />
@@ -559,7 +546,6 @@
             <input
               type="text"
               name="song-requests"
-              access="false"
               value=""
               id="song-requests"
             />
@@ -572,24 +558,26 @@
             </legend>
             <div class="">
               <div class="">
-                <input
-                  name="transportation"
-                  access="false"
-                  id="transportation-0"
-                  value="yes"
-                  type="radio"
-                />
-                <label for="transportation-0">Yes</label>
+                <label>
+                  <input
+                    name="transportation"
+                    id="transportation-0"
+                    value="yes"
+                    type="radio"
+                  />
+                  Yes</label
+                >
               </div>
               <div class="">
-                <input
-                  name="transportation"
-                  access="false"
-                  id="transportation-1"
-                  value="no"
-                  type="radio"
-                />
-                <label for="transportation-1">No</label>
+                <label>
+                  <input
+                    name="transportation"
+                    id="transportation-1"
+                    value="no"
+                    type="radio"
+                  />
+                  No</label
+                >
               </div>
             </div>
           </fieldset>
@@ -601,7 +589,6 @@
             <textarea
               type="textarea"
               name="questions"
-              access="false"
               id="questions"
               value=""
             ></textarea>
