@@ -388,6 +388,8 @@
                     <input
                       name="dinner-selection"
                       id="dinner-selection-0"
+                      required="required"
+                      aria-required="true"
                       value="beef"
                       type="radio"
                     />
@@ -399,6 +401,8 @@
                     <input
                       name="dinner-selection"
                       id="dinner-selection-1"
+                      required="required"
+                      aria-required="true"
                       value="salmon"
                       type="radio"
                     />
@@ -410,6 +414,8 @@
                     <input
                       name="dinner-selection"
                       id="dinner-selection-2"
+                      required="required"
+                      aria-required="true"
                       value="vegetarian"
                       type="radio"
                     />
@@ -483,16 +489,16 @@
 
               <!-- GUEST DINNER SELECTION -->
               <fieldset class="">
-                <label for="guest-dietary-restrictions" class=""
+                <label for="guest-dinner-selection" class=""
                   >What is your guests dinner selection?
                 </label>
                 <br />
                 <div class="radio-group">
                   <div class="">
-                    <label for="guest-dietary-restrictions-0">
+                    <label>
                       <input
-                        name="guest-dietary-restrictions"
-                        id="guest-dietary-restrictions-0"
+                        name="guest-dinner-selection"
+                        id="guest-dinner-selection-0"
                         required="required"
                         aria-required="true"
                         value="beef"
@@ -502,10 +508,10 @@
                     >
                   </div>
                   <div class="">
-                    <label for="guest-dietary-restrictions-1">
+                    <label>
                       <input
-                        name="guest-dietary-restrictions"
-                        id="guest-dietary-restrictions-1"
+                        name="guest-dinner-selection"
+                        id="guest-dinner-selection-1"
                         required="required"
                         aria-required="true"
                         value="salmon"
@@ -515,10 +521,10 @@
                     >
                   </div>
                   <div class="">
-                    <label for="guest-dietary-restrictions-2">
+                    <label>
                       <input
-                        name="guest-dietary-restrictions"
-                        id="guest-dietary-restrictions-2"
+                        name="guest-dinner-selection"
+                        id="guest-dinner-selection-2"
                         required="required"
                         aria-required="true"
                         value="vegetarian"
@@ -532,12 +538,9 @@
 
               <!-- GUEST DIETARY RESTRICTIONS -->
               <fieldset class="">
-                <label
-                  for="guest-dietary-restrictions"
-                  class="formbuilder-text-label"
+                <label for="guest-dietary-restrictions" class=""
                   >Does your guest have any dietary restrictions?
                 </label>
-                <br />
                 <input
                   type="text"
                   class=""
