@@ -1,32 +1,61 @@
 // Get references to all the necessary DOM elements
-const attendingRadio = document.querySelector('input[name="attendance"]');
-const guestRadio = document.querySelector('input[name="guest"]');
+// const attendingRadio = document.querySelector('input[name="attendance"]');
+const attendingRadios = document.querySelectorAll('input[name="attendance"]');
+// const guestRadio = document.querySelector('input[name="guest"]');
+const guestRadios = document.querySelectorAll('input[name="guest-attendance"]');
 const guestDetails = document.querySelector("#guest-info");
 const dinnerDetails = document.querySelector("#dinner-options");
 // const transportDetails = document.querySelector("#transport-details");
 
 // Add event listeners to the attendingRadio element
-attendingRadio.addEventListener("change", function () {
-  if (attendingRadio.value === "yes") {
-    console.log(attendingRadio);
-    // Show the dinner details section
-    dinnerDetails.classList.remove("hidden");
-  } else {
-    // Hide the dinner details section
-    console.log(attendingRadio);
-    dinnerDetails.classList.add("hidden");
-  }
+// attendingRadio.addEventListener("change", function () {
+//   if (attendingRadio.value === "Yes") {
+//     // Show the dinner details section
+//     dinnerDetails.classList.remove("hidden");
+//   } else {
+//     // Hide the dinner details section
+//     dinnerDetails.classList.add("hidden");
+//   }
+//   console.log(attendingRadio.value);
+// });
+
+// Add event listeners to the attendingRadios elements
+attendingRadios.forEach(function (attendingRadio) {
+  attendingRadio.addEventListener("change", function () {
+    if (attendingRadio.value === "Yes") {
+      // Show the dinner details section
+      dinnerDetails.classList.remove("hidden");
+    } else {
+      // Hide the dinner details section
+      dinnerDetails.classList.add("hidden");
+    }
+    console.log(attendingRadio.value);
+  });
 });
 
 // Add event listeners to the guestRadio element
-guestRadio.addEventListener("change", function () {
-  if (guestRadio.value === "yes") {
-    // Show the guest details section
-    guestDetails.classList.remove("hidden");
-  } else {
-    // Hide the guest details section
-    guestDetails.classList.add("hidden");
-  }
+// guestRadio.addEventListener("change", function () {
+//   if (guestRadio.value === "yes") {
+//     // Show the guest details section
+//     guestDetails.classList.remove("hidden");
+//   } else {
+//     // Hide the guest details section
+//     guestDetails.classList.add("hidden");
+//   }
+// });
+
+// Add event listeners to the guestRadio element
+guestRadios.forEach(function (guestRadio) {
+  guestRadio.addEventListener("change", function () {
+    if (guestRadio.value === "Yes") {
+      // Show the guest details section
+      guestDetails.classList.remove("hidden");
+    } else {
+      // Hide the guest details section
+      guestDetails.classList.add("hidden");
+    }
+    console.log(guestRadio.value);
+  });
 });
 
 // Add event listeners to the transportRadio element
