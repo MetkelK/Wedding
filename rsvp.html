@@ -160,11 +160,11 @@
         </ul>
       </div>
     </nav>
-    <!-- <div class="banner">
+    <div class="banner">
       <div class="text">
         <h1>RSVP</h1>
       </div>
-    </div> -->
+    </div>
     <section class="faqs">
       <p style="text-align: center">
         <b
@@ -176,140 +176,11 @@
       <p style="text-align: center">
         We look forward to you joining us! Fill our the form below
       </p>
-      <!-- <form
-        class="rsvp-form"
-        id="fs-frm"
-        name="test-form"
-        accept-charset="utf-8"
-        method="POST"
-        data-netlify="true"
-      >
-        <fieldset>
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </fieldset>
-        <fieldset>
-          <legend>Will you attend?</legend>
-          <label>
-            <input type="radio" name="attendance" value="yes" />
-            Yes, I'll be there!
-          </label>
-          <label>
-            <input type="radio" name="attendance" value="no" />
-            Sorry, I can't make it.
-          </label>
-        </fieldset>
-
-        <div id="dinner-options" class="hidden">
-          <fieldset>
-            <legend>Dinner Selection:</legend>
-            <label>
-              <input type="radio" name="dinner" value="beef" />
-              Beef
-            </label>
-            <label>
-              <input type="radio" name="dinner" value="salmon" />
-              Salmon
-            </label>
-            <label>
-              <input type="radio" name="dinner" value="vegetarian" />
-              Vegetarian
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <label for="dietary-restrictions">Dietary Restrictions:</label>
-            <input
-              type="text"
-              id="dietary-restrictions"
-              name="dietary-restrictions"
-            />
-          </fieldset>
-
-          <fieldset>
-            <legend>Are you bringing a guest?</legend>
-            <label>
-              <input type="radio" name="guest" value="yes" />
-              Yes
-            </label>
-            <label>
-              <input type="radio" name="guest" value="no" />
-              No
-            </label>
-          </fieldset>
-
-          <div id="guest-info" class="hidden">
-            <fieldset>
-              <label for="guest-name">Guest Name:</label>
-              <input type="text" id="guest-name" name="guest-name" />
-            </fieldset>
-
-            <fieldset>
-              <legend>Guest Dinner Selection:</legend>
-              <label>
-                <input type="radio" name="guest-dinner" value="beef" />
-                Beef
-              </label>
-              <label>
-                <input type="radio" name="guest-dinner" value="salmon" />
-                Salmon
-              </label>
-              <label>
-                <input type="radio" name="guest-dinner" value="vegetarian" />
-                Vegetarian
-              </label>
-            </fieldset>
-
-            <fieldset>
-              <label for="guest-dietary-restrictions"
-                >Guest Dietary Restrictions:</label
-              >
-              <input
-                type="text"
-                id="guest-dietary-restrictions"
-                name="guest-dietary-restrictions"
-              />
-            </fieldset>
-          </div>
-        </div>
-
-        <fieldset>
-          <label for="song-requests">Song Requests:</label>
-          <textarea id="song-requests" name="song-requests"></textarea>
-        </fieldset>
-
-        <fieldset>
-          <legend>
-            Do you need transportation between the hotel and the winery?
-          </legend>
-          <label>
-            <input type="radio" name="transportation" value="yes" />
-            Yes
-          </label>
-          <label>
-            <input type="radio" name="transportation" value="no" />
-            No
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <label for="questions-comments">Questions or Comments:</label>
-          <textarea
-            id="questions-comments"
-            name="questions-comments"
-          ></textarea>
-        </fieldset>
-        <fieldset>
-          <button type="submit" value="RSVP">RSVP</button>
-        </fieldset>
-      </form> -->
       <form
         class="rsvp-form"
-        id="test-form"
-        name="test-form"
+        id="new-form"
+        name="new-form"
         accept-charset="utf-8"
         method="POST"
         data-netlify="true"
@@ -348,33 +219,29 @@
           <!-- ATTENDANCE -->
           <fieldset class="">
             <legend class="">Will you attend?</legend>
-            <p>
-              <label>
-                <input
-                  name="attendance"
-                  id="attendance-0"
-                  required="required"
-                  aria-required="true"
-                  value="Yes"
-                  type="radio"
-                />
-                Yes, I'll be there!</label
-              >
-            </p>
-            <p>
-              <label>
-                <input
-                  name="attendance"
-                  id="attendance-1"
-                  required="required"
-                  aria-required="true"
-                  value="No"
-                  type="radio"
-                  checked
-                />
-                Sorry, I can't make it.</label
-              >
-            </p>
+
+            <label>
+              <input
+                name="attendance"
+                id="attendance-0"
+                required="required"
+                aria-required="true"
+                value="Yes"
+                type="radio"
+              />
+              Yes, I'll be there!</label
+            >
+
+            <label>
+              <input
+                name="attendance"
+                id="attendance-1"
+                aria-required="true"
+                value="No"
+                type="radio"
+              />
+              Sorry, I can't make it.</label
+            >
           </fieldset>
 
           <div id="dinner-options" class="hidden">
@@ -452,6 +319,8 @@
                       id="guest-attendance-yes"
                       value="Yes"
                       type="radio"
+                      required="required"
+                      aria-required="true"
                     />
                     Yes</label
                   >
@@ -463,7 +332,6 @@
                       id="guest-attendance-no"
                       value="No"
                       type="radio"
-                      checked
                     />
                     No</label
                   >
@@ -576,6 +444,8 @@
                       id="transportation-0"
                       value="yes"
                       type="radio"
+                      required="required"
+                      aria-required="true"
                     />
                     Yes</label
                   >
