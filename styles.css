@@ -236,11 +236,11 @@ nav ul li a {
     /* align-items: baseline; */
 }
 
-.rsvp-form fieldset input, .rsvp-form fieldset textarea {
+.rsvp-form fieldset input, .rsvp-form fieldset select, .rsvp-form fieldset textarea {
     border: 1px solid rgba(0,0,0,0.2);
     background-color: rgba(255,255,255,0.9);
     padding: .75em 1rem;
-    margin-bottom: 15px;
+    margin-bottom: 15px;;
     width: 100%;
     border-radius: 5px;
 }
@@ -267,11 +267,10 @@ nav ul li a {
 }
 
 .rsvp-form [type="submit"]:hover {
-    color: White;
-    background-color: #A8877E;
+    background-color: #E7EFF1;
     transform: translateY(-5px);
     box-shadow: 0 50px 50px -50px rgba(0, 0, 0, 0.5);
-    border: #E7EFF1;
+    /* border: #E7EFF1; */
 }
 
 .rsvp-form textarea {
@@ -298,4 +297,3 @@ nav ul li a {
 .hidden {
   display: none;
 }
-
