@@ -180,7 +180,7 @@ nav ul li a {
     }
 }
 
-.faqs, .travel {
+.faqs, .travel, .thanks {
     margin: 50px;
     padding: 100px 50px;
     text-align: left;
@@ -304,4 +304,8 @@ nav ul li a {
 
 .hidden {
   display: none;
+}
+
+.thanks p {
+    margin: 0 0 15px 0;
 }
