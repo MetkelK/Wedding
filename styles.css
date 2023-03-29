@@ -186,6 +186,10 @@ nav ul li a {
     text-align: left;
 }
 
+.thanks p {
+    margin: 0 0 15px 0;
+}
+
 @media (max-width: 990px) {
     .faqs, .travel {
         margin: 25px;
@@ -306,6 +310,3 @@ nav ul li a {
   display: none;
 }
 
-.thanks p {
-    margin: 0 0 15px 0;
-}
