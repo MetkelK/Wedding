@@ -180,16 +180,22 @@ nav ul li a {
     }
 }
 
-.faqs, .travel {
-    margin: 50px;
+.faqs, .travel, .thanks {
+    margin: 0 auto;
     padding: 100px 50px;
     text-align: left;
+    width: 60%;
+}
+
+.thanks p {
+    margin: 0 0 15px 0;
 }
 
 @media (max-width: 990px) {
     .faqs, .travel {
-        margin: 25px;
+        
         padding: 50px 25px;
+        width: 80%;
     }
 }
 
@@ -200,6 +206,13 @@ nav ul li a {
 
 .faqs p, .travel p:last-of-type {
     margin: 0 0 50px 0;
+}
+
+@media (max-width: 480px) {
+    .faqs, .travel, .thanks {
+        width: 90%;
+        
+    }
 }
 
 .external-link {
@@ -305,3 +318,4 @@ nav ul li a {
 .hidden {
   display: none;
 }
+
